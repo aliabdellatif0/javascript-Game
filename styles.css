@@ -19,7 +19,7 @@
   top: 580px;
 }
 
-.game__element--bird {
+.game__element--flyer {
   position: absolute;
   height: 45px;
   width: 60px;
