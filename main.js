@@ -24,4 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.addEventListener('keyup', fly )
+
+    function generateTube(){
+        let tubeLeft = 500
+        let tubeBottom = 150
+        const tube = document.createElement('div')
+        tube.classList.add('tube')
+        gameWindow.appendChild(tube)
+        tube.style.left = tubeLeft + 'px'
+        tube.style.bottom = tubeBottom + 'px'
+    }
+    generateTube()
 })

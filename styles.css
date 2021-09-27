@@ -1,3 +1,7 @@
+body {
+  background-color: #e7e7e7;
+}
+
 .game {
   width: 500px;
   height: 730px;
@@ -24,4 +28,11 @@
   height: 45px;
   width: 60px;
   background-color: cyan;
+}
+
+.tube {
+  background-color: white;
+  width: 60px;
+  height: 300px;
+  position: absolute;
 }
