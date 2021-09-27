@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     let flyerLeft = 220
-    let flyerBottom = 100
+    let flyerBottom = 180
     let gravity = 2
+    let isGameOver = false
 
     function startGame(){
         flyerBottom = flyerBottom - gravity
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         flyer.style.left = flyerLeft + 'px'
     }
 
-    setInterval(startGame, 20)
+    let gameTimer = setInterval(startGame, 20)
 
     function fly() {
         if (flyerBottom < 500){
@@ -43,9 +44,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearInterval(tubeTimer)
                 gameWindow.removeChild(tube)
             }
+
+            if(flyerBottom === 76){
+                gameOver()
+            }
         }
         let tubeTimer = setInterval(moveTube, 20)
         setTimeout(generateTube, 3000)
     }
     generateTube()
+
+    function gameOver(){
+        clearInterval(gameTimer)
+        isGameOver = true
+        document.removeEventListener('keyup', fly)
+    }
 })
