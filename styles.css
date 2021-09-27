@@ -1,0 +1,27 @@
+.game {
+  width: 500px;
+  height: 730px;
+  position: absolute;
+}
+
+.game__element--sky {
+  background-color: black;
+  width: 500px;
+  height: 580px;
+  position: absolute;
+}
+
+.game__element--ground {
+  background-color: gray;
+  width: 500px;
+  height: 150px;
+  position: absolute;
+  top: 580px;
+}
+
+.game__element--bird {
+  position: absolute;
+  height: 45px;
+  width: 60px;
+  background-color: cyan;
+}
