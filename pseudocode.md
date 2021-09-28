@@ -14,3 +14,7 @@
 -flyer must stop upon contact of tubes 
 
 -in order to stop flyer on tubes, flyer maintains in middle, tubes move, if tube position is within middle of screen and flyer is underneath height, there surely must be contact hence stop game. 
+
+-to allow game to restart and return to main menu for example could use a never ending while loop on all the functions
+
+-to kepp score it may be easier to keep seconds played as a high score
