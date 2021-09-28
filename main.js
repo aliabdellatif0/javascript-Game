@@ -11,12 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let gravity = 2
     let isGameOver = false
     let spacing = 100
-
+    let score = 0
+    
     startGame = () => {
+        score = score + 1
         flyerBottom = flyerBottom - gravity
         flyer.style.bottom = flyerBottom + 'px'
         flyer.style.left = flyerLeft + 'px'
     }
+
+    setInterval(function() {
+        highScoreDiv.textContent=score;
+        $("#highscore").load(" #highscore > *");
+    }, 100) 
 
     let gameTimer = setInterval(startGame, 20) //simulates our gravity
 
