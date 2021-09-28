@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 gameWindow.removeChild(tube)
             }
 
-            if(flyerBottom === 76){
+            if(tubeLeft>200 && tubeLeft < 200 && flyerLeft ===220||flyerBottom === 76){
                 gameOver()
             }
         }
