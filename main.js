@@ -45,17 +45,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 gameWindow.removeChild(tube)
             }
 
-            if(tubeLeft>200 && tubeLeft < 200 && flyerLeft ===220||flyerBottom === 76){
+            if(tubeLeft>200 && tubeLeft < 280 && flyerLeft ===220 || flyerBottom === 76){
                 gameOver()
             }
         }
         let tubeTimer = setInterval(moveTube, 20)
-        setTimeout(generateTube, 3000)
+        if (!isGameOver){setTimeout(generateTube, 3000)}
     }
     generateTube()
 
     function gameOver(){
         clearInterval(gameTimer)
+        
         isGameOver = true
         document.removeEventListener('keyup', fly)
     }
