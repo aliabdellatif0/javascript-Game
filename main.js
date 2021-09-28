@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         function moveTube() {
             tubeLeft = tubeLeft - 2 
             tube.style.left = tubeLeft + 'px'
-            upperTube.left = tubeLeft + 'px'
+            upperTube.style.left = tubeLeft + 'px'
 
             if(tubeLeft === -60){
                 clearInterval(tubeTimer)
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 gameWindow.removeChild(upperTube)
             }
 
-            if(tubeLeft>180 && tubeLeft < 280 && flyerLeft ===220 && flyerBottom < tubeBottom +223 || flyerBottom === 76){ //if statement halts flyer from vertical position
+            if(tubeLeft>180 && tubeLeft < 280 && flyerLeft ===220 && (flyerBottom < tubeBottom +223 || flyerBottom > tubeBottom + spacing +250) || flyerBottom === 76){ //if statement halts flyer from vertical position
                 gameOver()
                 clearInterval(tubeTimer)
             }
