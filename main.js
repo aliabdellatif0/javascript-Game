@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let tubeBottom = randomRange
         const tube = document.createElement('div')
         tube.classList.add('tube')
-        gameWindow.appendChild(tube)
+        if(!isGameOver){gameWindow.appendChild(tube)}
         tube.style.left = tubeLeft + 'px'
         tube.style.bottom = tubeBottom + 'px'
 
