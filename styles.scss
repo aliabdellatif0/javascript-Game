@@ -1,3 +1,8 @@
+body{
+    background-color: rgb(231, 231, 231);
+
+}
+
 .game {
     width: 500px;
     height: 730px;
@@ -20,6 +25,7 @@
     height: 150px;
     position: absolute;
     top: 580px;
+   
 
 }
 
@@ -29,4 +35,19 @@
     width: 60px;
     background-color: cyan;
 
+}
+
+.tube {
+    background-color: white;
+    width: 60px;
+    height: 300px;
+    position: absolute;
+}
+
+.upperTube {
+    transform: rotate(180);
+    background-color: white;
+    width: 60px;
+    height: 300px;
+    position: absolute;
 }

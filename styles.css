@@ -1,4 +1,11 @@
+body {
+  background-color: #e7e7e7;
+}
+
 .game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 500px;
   height: 730px;
   position: absolute;
@@ -24,4 +31,11 @@
   height: 45px;
   width: 60px;
   background-color: cyan;
+}
+
+.tube {
+  background-color: white;
+  width: 60px;
+  height: 300px;
+  position: absolute;
 }
