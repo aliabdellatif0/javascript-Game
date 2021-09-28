@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 gameWindow.removeChild(tube)
             }
 
-            if(tubeLeft>200 && tubeLeft < 280 && flyerLeft ===220 || flyerBottom === 76){ //if statement halts flyer from vertical position
+            if(tubeLeft>200 && tubeLeft < 280 && flyerLeft ===220 && flyerBottom < tubeBottom +223 || flyerBottom === 76){ //if statement halts flyer from vertical position
                 gameOver()
                 clearInterval(tubeTimer)
             }
