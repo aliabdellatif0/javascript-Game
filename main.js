@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let flyerBottom = 180 
     let gravity = 2
     let isGameOver = false
-    let spacing = 400
+    let spacing = 100
 
     function startGame(){
         flyerBottom = flyerBottom - gravity
@@ -34,21 +34,23 @@ document.addEventListener("DOMContentLoaded", () => {
         const tube = document.createElement('div')
         const upperTube = document.createElement('div')
         tube.classList.add('tube')
-        upperTube.classList.add('upperTube')
+        upperTube.classList.add('tube')
         if(!isGameOver){gameWindow.appendChild(tube)} //if statement prevents second last tube generating on game over
         if(!isGameOver){gameWindow.appendChild(upperTube)}
         tube.style.left = tubeLeft + 'px'
         tube.style.bottom = tubeBottom + 'px'
         upperTube.style.left = tubeLeft + 'px'
-        upperTube.style.bottom = tubeBottom + 'px'
+        upperTube.style.top = tubeBottom - spacing + 'px'
 
         function moveTube() {
             tubeLeft = tubeLeft - 2 
             tube.style.left = tubeLeft + 'px'
+            upperTube.left = tubeLeft + 'px'
 
             if(tubeLeft === -60){
                 clearInterval(tubeTimer)
                 gameWindow.removeChild(tube)
+                gameWindow.removeChild(upperTube)
             }
 
             if(tubeLeft>180 && tubeLeft < 280 && flyerLeft ===220 && flyerBottom < tubeBottom +223 || flyerBottom === 76){ //if statement halts flyer from vertical position
