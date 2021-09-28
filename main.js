@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const flyer = document.querySelector(".game__element--flyer")
     const gameWindow = document.querySelector(".game")
@@ -10,15 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let isGameOver = false
     let spacing = 100
 
-    function startGame(){
+    startGame = () => {
         flyerBottom = flyerBottom - gravity
         flyer.style.bottom = flyerBottom + 'px'
         flyer.style.left = flyerLeft + 'px'
     }
 
-    let gameTimer = setInterval(startGame, 20)
+    let gameTimer = setInterval(startGame, 20) //simulates our gravity
 
-    function fly() {
+    fly = () => {
         if (flyerBottom < 500){
             flyerBottom = flyerBottom + 50
         }
@@ -27,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener('keyup', fly )
 
-    function generateTube(){
+    generateTube = () => {
         let tubeLeft = 500
         let randomRange = Math.random() * 60
         let tubeBottom = randomRange
@@ -42,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         upperTube.style.left = tubeLeft + 'px'
         upperTube.style.top = tubeBottom - spacing + 'px'
 
-        function moveTube() {
+        moveTube = () => {
             tubeLeft = tubeLeft - 2 
             tube.style.left = tubeLeft + 'px'
             upperTube.style.left = tubeLeft + 'px'
@@ -63,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     generateTube()
 
-    function gameOver(){
+    gameOver = () => {
         clearInterval(gameTimer)
         
         isGameOver = true
