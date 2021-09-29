@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    
 
-    let gameTimer = setInterval(startGame, 20) //simulates our gravity
+    let gameTimer = setInterval(startGame, 20) //simulates our gravity plus setInterval function keeps executing
 
     fly = () => {
         if (flyerBottom < 500){
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tube.style.left = tubeLeft + 'px'
             upperTube.style.left = tubeLeft + 'px'
 
-            if(tubeLeft === -60){
+            if(tubeLeft === -60){ //gets rid of tube on very left good for memory storage
                 clearInterval(tubeTimer)
                 gameWindow.removeChild(tube)
                 gameWindow.removeChild(upperTube)
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
         let tubeTimer = setInterval(moveTube, 20)
-        if (!isGameOver){setTimeout(generateTube, 3000)}
+        if (!isGameOver){setInterval(generateTube, 3000)}
     }
     generateTube()
 
