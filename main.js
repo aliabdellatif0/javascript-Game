@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         upperTube.style.left = tubeLeft + 'px'
         upperTube.style.top = tubeBottom - spacing + 'px'
 
-        moveTube = () => {
+        moveTube = () => { // function similar to that of gravity 
             tubeLeft = tubeLeft - 2 
             tube.style.left = tubeLeft + 'px'
             upperTube.style.left = tubeLeft + 'px'
