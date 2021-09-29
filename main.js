@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let tubeBottom = randomRange
         const tube = document.createElement('div')
         const upperTube = document.createElement('div')
-        tube.classList.add('tube')
+        tube.classList.add('tube')//add a class as generated in js
         upperTube.classList.add('tube')
         if(!isGameOver){gameWindow.appendChild(tube)} //if statement prevents second last tube generating on game over
         if(!isGameOver){gameWindow.appendChild(upperTube)}
