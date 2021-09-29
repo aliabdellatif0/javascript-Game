@@ -75,6 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(gameTimer)
         
         isGameOver = true
-        document.removeEventListener('keyup', fly)
+        document.removeEventListener('keyup', fly) //stops game functionality 
     }
 })
